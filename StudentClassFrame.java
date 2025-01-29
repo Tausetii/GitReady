@@ -81,6 +81,9 @@ public class StudentClassFrame extends JFrame{
         
         btnSubmit.addActionListener(new ActionListener(){
             
+            /**Action button that grabs student information
+             * and displays it in a List View.
+             */
             public void actionPerformed(ActionEvent e){
                 String studentName = txtName.getText();
                 String selectedClass = "";

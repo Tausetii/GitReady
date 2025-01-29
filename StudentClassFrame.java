@@ -10,7 +10,7 @@ public class StudentClassFrame extends JFrame{
     JPanel studentPanel, classPanel;
     JLabel lblName, lblClass, lblLanguage, lblGender;
     JTextField txtName;
-    JRadioButton rdoMath, rdoScience, rdoSpanish, rdoEnglish, rdoMale, rdoFemale;
+    JRadioButton rdoMath, rdoScience, rdoHistory, rdoSpanish, rdoEnglish, rdoMale, rdoFemale;
     JButton btnSubmit;
     DefaultListModel<String> studentListModel;
     JList<String> studentList;
@@ -38,6 +38,7 @@ public class StudentClassFrame extends JFrame{
         lblClass = new JLabel("Select Class:");
         rdoMath = new JRadioButton("Math");
         rdoScience = new JRadioButton("Science");
+        rdoHistory = new JRadioButton("History");
         
         lblLanguage = new JLabel("Select Language:");
         rdoEnglish = new JRadioButton("English");
@@ -50,6 +51,7 @@ public class StudentClassFrame extends JFrame{
         ButtonGroup classButtonGroup = new ButtonGroup();
         classButtonGroup.add(rdoMath);
         classButtonGroup.add(rdoScience);
+        classButtonGroup.add(rdoHistory);
         
         ButtonGroup languageButtonGroup = new ButtonGroup();
         languageButtonGroup.add(rdoEnglish);
@@ -62,6 +64,7 @@ public class StudentClassFrame extends JFrame{
         classPanel.add(lblClass);
         classPanel.add(rdoMath);
         classPanel.add(rdoScience);
+        classPanel.add(rdoHistory);
         
         classPanel.add(lblLanguage);
         classPanel.add(rdoEnglish);
@@ -98,6 +101,11 @@ public class StudentClassFrame extends JFrame{
                 else if(rdoScience.isSelected())
                 {
                     selectedClass = "Science";
+                }
+
+                else if(rdoHistory.isSelected())
+                {
+                    selectedClass = "History";
                 }
                 
                 if(rdoEnglish.isSelected())
